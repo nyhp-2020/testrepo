@@ -1,0 +1,73 @@
+body{
+    background-color: #f0f0f0;
+}
+
+.login-div{
+    padding: 15px;
+    border: solid 1px #c0c0c0;
+    box-shadow: 0 0 2px #777777;
+    display: inline-block;
+}
+
+.login-div input{
+    /* display: block; */
+    margin-bottom: 7px;
+}
+
+/* .login-div input[type="email"]{
+    border: solid 1px blue;
+} */
+
+/* input[class="form-control blue"]{
+    border: solid 1px blue; 
+} */
+
+/*bárhol lehet a blue (a class kifejezésben) */
+/* input[class*="blue"]{
+    border: solid 1px blue; 
+} */
+
+/*elöl van a blue*/
+input[class^="blue"]{
+    border: solid 1px blue; 
+}
+
+/*a végén van a red*/
+input[class$="red"]{
+    border: solid 1px red; 
+}
+
+/*bárhol van a control*/
+input[class*="control"]{
+    display: block;
+}
+
+
+/* .login-div input[type="password"]{
+    border: solid 1px red;
+} */
+
+/*pszeudo szelektorok*/
+
+/*ha az egér fölé kerül*/
+.login-div button:hover{
+    box-shadow: 2px 2px 3px #c0c0c0;
+}
+
+/*ha megkapja a fókuszt*/
+.login-div input:focus{
+    box-shadow: 2px 2px 3px #c0c0c0;
+}
+
+/*az utolsó gyerek (listaelem)*/
+ul li:last-child{
+    text-decoration: underline;
+}
+/*az első gyerek (listaelem)*/
+ul li:first-child{
+    color: red;
+}
+/*a második gyerek (listaelem)*/
+ul li:nth-child(2){
+    color: blue;
+}

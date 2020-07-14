@@ -1,0 +1,16 @@
+#colorDiv{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    /* background-color: darkblue; */
+    /*  background-color: rgb(100, 20, 200);*/ /*red,green,blue*/
+    background-color: rgba(100, 20, 200,0.158);
+}
+
+html{
+    /* background-color: #e0e0e0;
+    background-image: url("../img/bb.jpg");
+    background-position: left center;
+    background-repeat: no-repeat; /*repeat-x, repeat-y,no-repeat*/ 
+    background: url("../img/bb.jpg") no-repeat;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Megrendelés</title>
+</head>
+
+<body>
+    <div class="container">
+        <form>
+            <fieldset>
+                <legend>Személyes Adatok</legend>
+                <div>
+                    <label for="name">Név:*</label>
+                    <input id="name" name="name" type="text" required>
+                </div>
+                <div>
+                    <label for="email">Email cím:*</label>
+                    <input id="email" name="email" type="email" required>
+                </div>
+                <div>
+                    <label for="address">Cím:*</label>
+                    <input id="address" name="address" type="text" name="" required>
+                </div>
+                <div>
+                    <label for="comment">Megjegyzés:</label>
+                    <textarea id="comment" name="comment" rows="5"></textarea>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Termék Adatiai</legend>
+                <span>Extra feltét:</span>
+                <div>
+                    <input id="nothing" name="nothing" type="checkbox" value="0" checked>
+                    <label for="nothing">Nem kérek</label>
+                </div>
+                <div>
+                    <input id="cheese" name="cheese" type="checkbox" value="300">
+                    <label for="cheese">feltét 1</label>
+                </div>
+                <div>
+                    <input id="double-cheese" name="double-cheese" type="checkbox" value="600">
+                    <label for="double-cheese">feltét 2</label>
+                </div>
+                <div>
+                    <input id="double-meet" name="double-meet" type="checkbox" value="1000">
+                    <label for="double-meet">feltét 3</label>
+                </div>
+                <div>
+                    <input id="double-double" name="double-double" type="checkbox" value="1600">
+                    <label for="double-double">feltét 4</label>
+                </div>
+                <div>
+                    <input id="valami-mas" name="valami-mas" type="checkbox" value="1800">
+                    <label for="valami-mas">feltét 5</label>
+                </div>
+
+                <div>
+                    <input id="nothing-rb" name="extra" type="radio" value="0" checked>
+                    <label for="nothing-rb">Nem kérek</label>
+                </div>
+                <div>
+                    <input id="cheese-rb" name="extra" type="radio" value="300">
+                    <label for="cheese-rb">feltét 1</label>
+                </div>
+                <div>
+                    <input id="double-cheese-rb" name="extra" type="radio" value="600">
+                    <label for="double-cheese-rb">feltét 2</label>
+                </div>
+                <div>
+                    <input id="double-meet-rb" name="extra" type="radio" value="1000">
+                    <label for="double-meet-rb">feltét 3</label>
+                </div>
+                <div>
+                    <input id="double-double-rb" name="extra" type="radio" value="1600">
+                    <label for="double-double-rb">feltét 4</label>
+                </div>
+                <div>
+                    <input id="valami-mas-rb" name="extra" type="radio" value="1800">
+                    <label for="valami-mas-rb">feltét 5</label>
+                </div>
+
+                <div>
+                    <label for="sauce">Szósz:</label>
+                    <select id="sauce" name="sauce">
+                        <option value="0">szósz 1</option>
+                        <option value="100">szósz 2</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="quantity">Mennyiség:</label>
+                    <input id="quantity" name="quantity" type="number" min="1" max="10">
+                </div>
+            </fieldset>
+            <div>
+                <input type="button" value="Rendelés leadása"> Ár: <span>1200</span> Ft
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
