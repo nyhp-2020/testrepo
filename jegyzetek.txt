@@ -1,0 +1,551 @@
+Visual Studio Code
+Ctrl + <+> (numerikus plusz): betûméret növelés
+Ctrl + <-> (numerikus minusz): netûméret csökkentés
+Ctrl + s : mentés
+Ctrl + d : kijelölt szöveg további elõfordulásainak kijelölése (csoportos kijelölés)
+Ctrl + F2: csoportos kijelölés (összes)
+Ctrl + z : legutóbbi mûvelet visszavonása
+Alt + <felfelé nyil> : sor (blokk) mozgatása fel
+Alt + <lefelé nyil> : sor (blokk) mozgatása le
+Alt + bal Shift + <lefelé nyil>: lefelé többszöröz sorokat
+Alt + bal Shift + <felfelé nyil>: felfelé többszöröz sorokat
+Ctrl + <Space>: súgó
+
+code .
+
+Nodejs telepítés
+https://nodejs.org/en/
+
+Nodejs ellenõrzése parancs:
+node -v
+
+Git telepítés
+https://git-scm.com/
+
+Git ellenõrzés parancs:
+git
+git --version
+
+
+
+git clone https://github.com/nyhp-2020/testrepo.git
+(timeout)
+
+fiók létrehozása itt:
+github.com
+
+git parancsok
+git status
+echo bob >> new.txt (létrejön, "untracked" állapotú lesz)
+git add new.txt ("staged" állapot)
+git add .
+//git commit -m "New file has been added."
+ez így nem lesz sikeres még...
+mailcím, usernév beállítása:
+git config --global user.email "mailcim"
+git config --global user.name "name"
+proxibeállítás:
+git config --global http.proxy http://:@mvhproxy.mvh.local:8080
+
+beállítások listázása:
+git config --list
+
+git commit -m "New file has been added." ("unmodified" állapot)
+notepad new.txt (módosítás) ("modified" állapot)
+git add . ("staged" állapot)
+git commit -m "New.txt modified again." ("unmodified" állapot)
+
+git fetch (lokális és szerveren lévõ fileok összehasonlítása)
+git pull (szerveren lévõ fileok lehúzása)
+git push (lokális fileok szerverre küldése)
+
+Tehát
+módosítás
+git add .
+git commit -m "Üzenet"
+git pull
+git push
+
+
+URL- Uniform Resource Locator
+domain: server hol található
+pl.
+https://www.w3schools.com/
+domain (root)+ relatív útvonal
+https://www.w3schools.com/html/default.asp
+anchor url:
+http://127.0.0.1:5500/index.html#content
+
+Listák
+Dokumentáció
+
+    https://www.w3schools.com/tags/tag_ul.asp
+    https://www.w3schools.com/tags/tag_ol.asp
+    https://www.w3schools.com/tags/tag_dl.asp
+
+Validátor:
+https://validator.w3.org/
+
+Fonts:
+https://www.w3schools.com/cssref/css_websafe_fonts.asp
+lorem ipsum generator
+https://fonts.google.com/
+árvíztûrõ tükörfúrógép
+
+CSS Box Model
+
+példák:
+margin:10px;
+marhin-top:10px;
+margin-right
+margin-bottom
+margin-left
+margin: 10p 20px 30px 0; (fent jobbra,alul,balra)
+margin: 10px 20px; (fent és lent 10,balra és jobbra 20)
+margin: 10px 20px 0; (fent 10,lent 0,balra és jobbra 20)
+
+border:solid;  (folytonos vonal)
+border:dashed 1px blue; (szaggatott vonal, vastagság 1, szín)
+border-top,...
+padding
+
+box-shadow: 0 0 2px black; (vízszintes eltolás jobbra, függõleges eltolás le,árnyék szélesség,szín)
+
+relatív mértékegységek:
+margin:2%;
+width:14%;
+max-width:75%;
+min-width:75%;
+
+láthatóság:
+display:none; (kivesszük a megjelenítési listából)
+display:block; (teljes szélességet elfoglalja)
+display:inline; (sorban jelenik meg)
+visibility: hidden; (Az elem helye megmarad, de nem látszik!)
+visibility: visible; (látszik az elem)
+
+Pozícionálás
+position:static; (A többi elemtõl is függ. Mennyi hely marad neki...)
+position:relative; (a statikus pozícióhoz képest elcsúsztatás)
+position:fixed; (a böngészõablakhoz képest rögzített hely)
+position:absolute; (az elsõ nem statikus elemhez képest... Pl. egy position:relativ pozícionálású div-hez képest.)
+
+Colors:
+https://www.w3schools.com/colors/colors_names.asp
+rgb(0,0,0) (fekete)
+#000000 (hexadecimálisan)
+rgb(255,255,255) (fehér)
+#FFFFFF
+rgba(red,green,blue,alpha) (alpha: átlátszóság 1: nem átlátszó 0:teljesen átlátszó )
+
+rgb to hex
+
+Bootstrap
+https://getbootstrap.com/
+Ikonok
+https://fontawesome.com/
+Javasript
+https://www.javascript.com/
+
+Script file beágyazása pl. a </body> tag elé:
+<script src="js/main.js"></script>
+
+.form-group*2 + <Enter> eredménye:
+<div class="form-group"></div>
+<div class="form-group"></div>
+
+input.form-control
+<input type="text" class="form-control">
+
+button.btn.btn-primary
+<button class="btn btn-primary"></button>
+
+Clean Code
+Elnevezés (beszédes nevek):
+pl. numberOfProducts
+Ne legyen félrevezetõ a név!
+Lehetõleg kerüld az O és I karaktereket (összekeverhetõk a 0-val és 1-el)
+Felesleges kommentet ne írjunk,de ha szükséges akkor írjunk!
+Formázás, behúzásokkal blokkokon belül! Fontosabb részek között legyen egy üres sor!
+Függvénynevekhez igéket használj! Max 2-3 bemenõ adat.
+Max 4-6 sor legyen egy függvény. Szétbontás.
+
+Scope
+let "block" scope-ú, nem lehet újra létrehozni
+var változó újra létrehozható
+
+Tömbök
+let cars = ["VW","Audi","Volvo"]
+cars.push("Trabant"); //hozzáfûzi a végéhez
+cars.pop(); //Eltávolítja az utolsó elemet és azt visszaadja
+cars.unshift("Lada"); A tömb elejéhez ad egy elemet
+cars.shift(); Eltávolítja az elsõ elemet és visszaadja
+
+cars.slice(0,1); Új tömböt ad vissza a kezdö indextõl indulva, a vég index már nincs bent
+cars.splice(1,1); Módosítja a tömböt: a kezdõ indextõl a megadott darabszámú elemet kivágja belõle
+cars.slice(1,0,"Audi"); Az 1-es indextõl nem töröl semmit, de beszúr egy újat. Megadhatok több új beszúrandó elemet is.
+cars.join(" ,"); A tömb elemeit egy sztringben adja vissza a megadott elválasztó karaktersorozattal.
+
+Összetett operátorok:
++=
+*= ...
+
+Objektumok:
+let user = {
+name: "Kiss Ramóna",
+age: 20,
+city: "Bp"
+}
+
+user.name;
+
+let admin = new Object();
+
+let customer = {};
+
+Object.keys(user); kulcsok lekérése
+Object.values(user); értékek lekérése
+Object.entries(user); kulcs érték párok lekérdezése
+Object.entries(user)[1]; eredmény: [age,20]
+Object.entries(user)[1][0]; eredmény: "age"
+
+Object.keys(user).length; 3
+
+Konstant objektum:
+const user ={
+name: "John Doe",
+age: 33
+};
+
+user = {}; Ez nem lehetséges, konstans objektumnál a "kötést" nem lehet megváltoztatni az azonosító és a tartalom között
+user.name = "Sanyi"; ez lehet! Konstans objektum tulajdonságai változhatnak!
+
+for in ciklus:
+
+for(let k in user){
+	console.log("key:",k,"value:",user[k]);
+}
+
+ezek egyenértékûek
+user.name;
+user["name"];
+
+tömbök is bejárhatók vele:
+
+for(let k in cars){
+	console.log("key:",k,"value:",cars[k]);
+}
+
+cars["0"]; ez is jó
+
+
+for of ciklus:
+értékeken megy végig:
+for(let car of cars){
+	console.log(car);
+};
+
+for(let k of Object.key(user)){
+	console.log(k, user[k]);
+}
+
+for(let val of Object.values(user)){
+	console.log(val);
+}
+
+for(let entry of Object.entries(user)){
+	console.log(entry[0],entry[1]);
+}
+
+Metódusok:
+user ={
+name: "John Doe",
+age: 30
+sayHi: function(){
+	return `Hi, my name is ${this.name}!`;
+}
+};
+
+console.log(user.sayHi());
+
+this:
+-metódusban az az objektum, ahol épp van a végrehajtás
+-ha nem objektumban vagyok,akkor a Window a böngészõ legfelsõbb szintû objektuma
+-eseménykezelõ függvényben az az elem, amihez az eseménykezelõt kötöttük
+
+DOM
+document.getElementById("topInput");// id alapján adja vissza az elemet
+document.getElementById("");//ha nem létezik az id, null-t ad vissza
+
+document.getElementsByName("amount-input");//tömböt ad vissza név alapján benne a talált elemekkel
+document.getElementsByName("amount-input")[0];//a tömb egy eleme
+document.getElementsByName("");//ha nem létezik olyan név, üres tömböt ad vissza
+
+document.getElementsByClassName("form-control");//tömböt ad vissza osztálynév alapján a talált elemekkel
+
+document.getElementsByTagName("h3");//tömböt ad vissza tagnév alapján a talált elemekkel
+
+
+A modern webfejlesztésben általában ezeket használjuk:
+
+document.querySelector(".form-control");//a legelsõ elemet adja vissza a több lehetséges közül
+document.querySelector(".form-cont");//ha nincs, null-t ad vissza
+
+document.querySelectorAll(".form-control");// a találatok tömbjét adja vissza
+document.querySelectorAll(".form-cont");// ha nincs ilyen, üres tömböt
+
+
+
+
+document.querySelector("input#topInput");//egy element objektumot ad vissza
+let topInput = document.querySelector("input#topInput"); //elmentés egy változóba
+typeof topInput; // típusa object
+
+//Element bõvítése új metódussal
+Element.prototype.setUrgent = function(){
+    this.style.border = "solid 2px red";
+}
+//metódus meghívása egy elemre
+
+document.querySelector("input#topInput").setUrgent();//piros lesz a kerete
+
+//Attributumok lekérdezése
+topInput.getAttribute("class");
+topInput.getAttribute("id");
+topInput.getAttribute("name");
+topInput.getAttribute("type");
+//Az összes attributum lekérdezése egy többe
+topInput.attributes;
+
+topInput.setAttribute("type","email");//egy attributum beállítása
+topInput.setAttribute("type","password");
+
+//összes input kiválasztása
+let myNodeList = document.querySelectorAll("input");
+
+for(let i=0; i < myNodeList.length; i++){
+	myNodeList[i].style.backgroundColor = "red";
+}
+
+for(let element in myNodeList){
+	if(myNodeList[element].style){
+		myNodeList[element].style.color = "yellow";
+		//console.log(element);
+	}
+}
+
+//módosítás függvénnyel
+
+function massModify(selector,attribute,value){
+	let nodeList = document.querySelectorAll(selector);
+	for(let i = 0; i < nodeList.length; i++ ){
+		nodeList[i][attribute] = value;
+	}
+}
+
+massModify("input","placeholder","érték");//alapértelmezett érték
+massModify("input","title","érték"); //címke
+
+// Egy elem gyerekei
+document.querySelector("input#topInput").childElementCount;//gyerekszám
+document.querySelector("div").childElementCount; //elsõ div gyerekei száma
+
+document.querySelector("div.form-group:nth-child(2)");
+document.querySelector("div.form-group:nth-child(2)").children; //gyerekek
+document.querySelector("div.form-group:nth-child(3)").children;
+
+document.querySelector("div.form-group:nth-child(3)").childNodes; //sima szövegnek is létrehoz a böngészõ egy node-ot, ezeket is visszaadja itt
+
+document.querySelector("div.form-group:nth-child(3)").firstChild;//fizetendõ szöveg
+
+document.querySelector("div.form-group:nth-child(3)").firstElementChild;//span elemet adja ki (elsõ html elem)
+
+document.querySelector("div.form-group:nth-child(3)").lastChild;//Ft szöveg
+
+document.querySelector("div.form-group:nth-child(3)").lastElementChild;//ez is a spn elem lesz (csak egy van ezért az az elsõ és utolsó is)
+
+//Gyerek létrehozás, eltávolitás
+
+//Add help text
+let helpText = document.createElement("smal");
+helpText.className = "form-text text-muted";
+helpText.innerHTML = "Adja meg a feltéteket !";
+
+let parent = document.querySelector("div.form-group:nth-child(1)");
+parent.appendChild(helpText); //gyerek hozzáadása
+
+parent.removeChild(helpText); //gyerek eltávolítása
+
+//Dátumok
+new Date(); //Aktuális dátum
+new Date(2019,5,2);// 2019, Jun!, 02 (hónapok 0-val kezdõdnek)
+new Date().getDay(); // aktuális nap sorszáma (vasárnappal kezdõdik : 0)
+new Date(2019,5,2).getDay(); // adott dátum milyen napra esik
+
+NodeJs
+Node Package Modules
+https://www.npmjs.com/
+Csomagok:
+lodash
+Telepítés a könvtárba:
+
+npm help config
+
+npm doctor
+
+npm config set https-proxy http://mvhproxy.mvh.local:8080
+
+npm i lodash
+
+globális telepítés (a gépen bárhonnan eléred a csomagot):
+npm i express-generator -g
+
+package.json file létrehozása (ezzel tartja nyilván a csomagkörnyezetet...)
+npm init -y
+
+telepítés a package.json alapján
+npm install
+
+fõverziót nem enged váltani:
+"lodash": "^4.17.19"
+
+csak patch-et enged telepíteni
+"lodash": "~4.17.19"
+csak ez a verzió lehet
+"lodash": "4.17.19"
+
+csomag eltávolítása:
+npm remove lodash
+
+json-server telepítése globálisan
+npm i -g json-server
+
+szerver indítása:
+json-server --watch .\db\db.json
+
+leállítás
+Ctrl+C
+
+Bootstrap telepítés:
+npm i bootstrap
+
+awesome fontok telepítése:
+npm i font-awesome
+
+github-on
+github json-server
+https://github.com/typicode/json-server
+
+JSON (Java Script Object Notation)
+json validator:
+https://jsonformatter.curiousconcept.com/
+-Kulcsok mindig idézõjelek között vannak.
+-A string is mindig idézõjelben van
+-A számokat és a boolean értékeket nem kell idézõjelbe tenni
+-Ha idézõjelet akarok a szövegben a \"-t használok (<AltGr>+Q)
+
+Json String -> Objektum konverzió
+JSON.parse(json);
+Objektum -> Json String konverzió
+JSON.stringify(object)
+
+fetch API
+https://www.caniuse.com/#search=fetch
+
+Utasításvégrehajtás:
+const asyncCall = () => {
+  setTimeout(() => {
+
+    return {message: "Ez egy idõzített üzenet."};
+  }, 2000);
+
+};
+
+const value = asyncCall();
+
+console.log(value.message);
+
+
+VM40:7 Uncaught TypeError: Cannot read property 'message' of undefined
+    at <anonymous>:7:19
+(anonymous) @ VM40:7
+
+promise doku:
+https://babeljs.io/docs/en/learn/#ecmascript-2015-features-promises
+
+fetch doku:
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+
+GET lekérés
+POST létrehozás
+PUT frissítés
+DELETE törlés
+
+GET példa:
+let fetchOptions = {
+        method: "GET",
+        mode: "cors",
+        cache: "no-cache"
+
+    };
+
+    return fetch(url, fetchOptions).then(
+        response => response.json(),
+        err => console.error(err)
+    );
+
+DEL példa:
+let fetchOptions = {
+        method: "DELETE",
+        mode: "cors",
+        cache: "no-cache"
+    };
+    
+    fetch(`http://localhost:3000/users/${id}`, fetchOptions).then(
+        resp => resp.json(),
+        err => console.error(err)
+    ).then(
+        data => {
+            startGetUsers();
+            //tr.style.display = "none"; //sor eltüntetése
+        },
+        err => console.error(err)
+    );
+
+POST példa: (új user)
+let fetchOptions = {
+        method: "POST",
+        mode: "cors",
+        cache: "no-cache",
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    };
+    fetch(`http://localhost:3000/users/`, fetchOptions).then(
+        resp => resp.json(),
+        err => console.error(err)
+    ).then(
+        //data => console.log(data)
+        data => startGetUsers()
+    );
+
+PUT példa: (módosítás)
+let fetchOptions = {
+        method: "PUT",
+        mode: "cors",
+        cache: "no-cache",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    };
+    fetch(`http://localhost:3000/users/${data.id}`,fetchOptions).then(
+        resp => resp.json(),
+        err => console.error(err)
+    ).then(
+        data => startGetUsers()
+    );
+
+vscode live-server állítása:
+https://github.com/ritwickdey/vscode-live-server/blob/master/docs/settings.md
